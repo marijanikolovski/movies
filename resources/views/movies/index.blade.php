@@ -1,22 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>List of movies</h1>
-    <ul>
-        @foreach ($movies as $movie)
-            <ul>
-                <a href="">
-                    {{ $movie->title }}
-                </a>
+@extends('layout.master')
+
+@section('title', 'Blog')
+
+@section('content')
+    <main role="main" class="container">
+        <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 font-italic">List of movies</h1>
+            </div>
+        </div>          
+        <ul>
+            @foreach ($movies as $movie)
+                <h2>
+                    <a href="">
+                        <li>{{ $movie->title }}</li>
+                    </a>
+                </h2>
                 <p>{{ $movie->storyline }}</p>
-            </ul>
-        @endforeach
-    </ul>
-</body>
-</html>
+            @endforeach
+        </ul>
+    </main><!-- /.container -->
+@endsection
+
