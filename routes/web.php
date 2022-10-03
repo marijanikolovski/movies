@@ -14,8 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/movies', [MoviesController::class, 'index']);
+ROute::get('/movies/{id}', [MoviesController::class, 'show'])->name('movies-index');

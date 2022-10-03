@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Blog')
+@section('title', 'Movies')
 
 @section('content')
     <main role="main" class="container">
@@ -12,7 +12,7 @@
         <ul>
             @foreach ($movies as $movie)
                 <h2>
-                    <a href="">
+                    <a href="{{ route('movies-index', ['id' => $movie->id]) }}">
                         <li>{{ $movie->title }}</li>
                     </a>
                 </h2>
