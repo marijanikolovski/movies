@@ -19,6 +19,8 @@
                 <p>{{ $movie->storyline }}</p>
             @endforeach
         </ul>
+
+        @include('partials.sidebar')
     </main><!-- /.container -->
 @endsection
 

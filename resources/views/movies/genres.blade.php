@@ -19,5 +19,7 @@
                 @endforeach
             </div>
             </ul>
+
+            @include('partials.sidebar')
     </main><!-- /.container -->
 @endsection
