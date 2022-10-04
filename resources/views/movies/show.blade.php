@@ -12,7 +12,7 @@
         <div class="container">
             @if ($movie)
             <p>Year: {{ $movie->year }}</p>
-            <p>Genre: {{ $movie->genre }}</p>
+            <p>Genre: <a href="{{ route('movies-genre', ['genre' => $movie->genre]) }}">{{ $movie->genre }}</a></p>
             <p>Director: {{ $movie->director }}</p>
             <p>Storyline: {{ $movie->storyline }}</p>
             <br>
