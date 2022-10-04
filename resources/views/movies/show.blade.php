@@ -35,5 +35,27 @@
             @endforeach
         </ul>
     </div>
+
+    <form method="POST" action="/movies/{{ $movie->id }}/comments">
+        @csrf
+
+        <div class="mb-3">
+            <label class="form-label" >Leave a comment</label>
+            <textarea class="form-control" name="content" rows="2" ></textarea>
+        </div>
+
+        @error('content')
+            @include('partials.error')
+        @enderror
+
+        <div class="mb-3">
+            <label class="form-label" >Creation date</label>
+            <input type="date" class="form-control" name="created_at"></textarea>
+        </div>
+
+        <button type="submit" class="btn brn-primary">Submit</button>
+
+    </form>
+
 @endsection
 
